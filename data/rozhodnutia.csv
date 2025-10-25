@@ -1,0 +1,3 @@
+ID Rozhodnutia,Dátum,Zámer (INT),Existencia (LEX),Múdrosť (WIS),Vzájomnosť (REL),Pravda (VER),Sloboda (LIB),Jednota (UNI),Tvorba (CRE),Kompozit AAV,Status
+1,2025-10-22,0.85,0.78,0.92,0.70,0.95,0.82,0.88,0.91,0.85,ACCEPT
+2,2025-10-23,0.75,0.60,0.65,0.55,0.80,0.68,0.72,0.75,0.68,CONDITIONAL
