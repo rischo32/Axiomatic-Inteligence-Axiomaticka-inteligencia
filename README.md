@@ -5,7 +5,7 @@
 
 ---
 
-Čo to je (stručne a bez omáčky)
+Čo to je
 
 Axiomatic Intelligence je implementácia axiomatického rámca (Hexagramon / Axiom Engine v1.0–4.0) — súbor nástrojov, dokumentov a šablón na:
 
@@ -242,15 +242,3 @@ Skriptové súbory (aav_calc.py, bayes_update.py, gd_update.py, merkle_anchor.py
 
 
 ---
-
-Som pripravený pokračovať. Vyber jednu z možností nižšie (odpovedz číslo):
-
-1. Vygenerovať a doručiť ZIP so všetkými súbormi vrátane tohto README a ukážkových skriptov.
-
-
-2. Pridať do .github/workflows/ci.yml konkrétny krok, ktorý automaticky vygeneruje Merkle root pri pushi do data/ a uloží ho ako build artifact (demo implementácia s varovaním o multisig).
-
-
-3. Pripraviť jednoduchý statický dashboard (React + Tailwind) zobrazujúci AAV časovú os, REP7 alarmy a históriu auditov — pripravený na nasadenie ako GitHub Pages.
-
-
