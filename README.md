@@ -5,7 +5,13 @@ Ontologicko-etický rámec pre ľudí a AI systémy založený na siedmich princ
 ## Popis
 Tento projekt implementuje systém Axiomatickej Inteligencie (verzia 4.0, október 2025), vrátane metrík, indexov (HIS-7), governance (Core Custodian Council), Python skriptov na výpočty (AAV, Bayesovské aktualizácie, gradient descent, Merkle anchoring), CSV šablón a blockchain integrácie. Cieľom je poskytnúť etický kompas pre rozhodovanie v AI, organizáciách a osobnom živote. Systém je cyklicko-evolučný s revíziou (REP7) a adaptáciou váh.
 
-### Kľúčové komponenty
+### Quickstart
+1. `git clone https://github.com/Rischo32/Axiomatic-Inteligence-Axiomaticka-inteligencia.git`
+2. `cd Axiomatic-Inteligence-Axiomaticka-inteligencia`
+3. `pip install -r requirements.txt`
+4. `python src/aav_calc.py --input data/rozhodnutia.csv`
+
+#### Kľúčové komponenty
 - **Princípy a axiomy**: Definované v `docs/axiomy.md` (vrátane heptagramu, verzie Ž a rozšírenia na 32 axiómov).
 - **Metriky a indexy**: Popísané v `docs/metriky.md` (napr. INT, LEX, WIS... s prahovými hodnotami T_n).
 - **Python skripty**: V priečinku `src/` na výpočet AAV/HEXA7, aktualizácie váh a anchoring.
