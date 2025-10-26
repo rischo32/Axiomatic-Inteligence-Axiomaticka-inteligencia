@@ -35,7 +35,6 @@ pytest -q
 pre-commit run --all-files
 
 
-
 Checklist pred merge
 
 [ ] PR má jasný popis a dôvod
@@ -60,3 +59,68 @@ Reviewer notes
 Zvláštne body, ktorým treba venovať pozornosť:
 
 (napríklad: bezpečnostné limity, zmeny v API, migrácie dát)
+
+Zodpovednosť
+
+Podpisom tejto zmeny potvrdzujem, že príspevok dodržiava licenčné pravidlá projektu.
+
+---
+
+# 4) CI workflow — `.github/workflows/ci.yml` (umiestnenie: `.github/workflows/ci.yml`)
+
+```yaml
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-and-lint:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.10, 3.11]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Install pre-commit (for hooks)
+        run: |
+          pip install pre-commit
+          pre-commit --version
+
+      - name: Run pre-commit hooks
+        run: pre-commit run --all-files
+
+      - name: Lint (flake8)
+        run: |
+          flake8 .
+
+      - name: Check formatting (black)
+        run: |
+          black --check .
+
+      - name: Run tests
+        run: |
+          pytest -q
