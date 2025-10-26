@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Axiomatická inteligencia — Interaktívna šou (demo)</title>
+<style>
+:root{--bg:#071018;--panel:#0f1720;--muted:#89a0b3;--accent:#7ad1ff;--card:#0b1320;--glass:rgba(255,255,255,0.02)}
+html,body{height:100%;margin:0;background:var(--bg);color:#e6eef8;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial}
+#app{display:flex;flex-direction:column;height:100vh}
+header{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent)}
+h1{margin:0;font-size:16px}
+.controls{display:flex;gap:8px;align-items:center}
+button,input[type="file"]{background:var(--card);border:1px solid rgba(255,255,255,0.03);color:inherit;padding:8px;border-radius:8px}
+main{display:flex;flex:1;gap:12px;padding:12px;box-sizing:border-box}
+#vis{flex:1;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border-radius:10px;overflow:hidden;position:relative}
+svg{width:100%;height:100%}
+aside{width:340px;min-width:240px;background:var(--panel);border-radius:10px;padding:12px;box-sizing:border-box}
+.panel h2{margin:0 0 8px 0;font-size:14px}
+.stat{font-weight:800;font-size:20px}
+.list{margin-top:8px;max-height:56vh;overflow:auto}
+.axiom{padding:8px;border-radius:8px;margin-bottom:6px;background:var(--glass);display:flex;justify-content:space-between;align-items:center}
+.small{font-size:12px;color:var(--muted)}
+.tooltip{position:absolute;pointer-events:none;background:rgba(0,0,0,0.75);color:#fff;padding:6px 8px;border-radius:6px;font-size:12px;display:none}
+.banner{padding:10px;border-radius:8px;margin-bottom:10px;font-weight:800}
+.banner.warn{background:#fbbf24;color:#1f2937}
+.banner.ok{background:#10b981;color:#042c17}
+.footer{font-size:12px;color:var(--muted);margin-top:10px}
+.link{color:var(--accent);text-decoration:none}
+</style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <h1>Axiomatická inteligencia — Interaktívna šou</h1>
+    <div class="controls">
+      <input id="fileInput" type="file" accept=".csv,.json" />
+      <button id="btnFetch">Fetch / Serve</button>
+      <button id="btnExport">Export PNG</button>
+      <button id="btnSaveLayout">Save layout</button>
+      <input id="layoutInput" type="file" accept=".json" style="display:none"/>
+      <button id="btnLoadLayout">Load layout</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="vis">
+      <svg id="svg"></svg>
+      <div id="tooltip" class="tooltip"></div>
+      <div id="banner" style="position:absolute;left:12px;top:12px;display:none"></div>
+    </div>
+
+    <aside>
+      <div class="panel">
+        <h2>Prehľad</h2>
+        <div style="margin-top:6px">Počet uzlov: <span id="nodeCount" class="stat">0</span></div>
+        <div class="small" style="margin-top:6px">Priemery axiomov (0..1)</div>
+        <div id="axiomList" class="list"></div>
+        <div style="margin-top:8px">
+          <div class="small">Priemerné AAV: <span id="avgAav" class="stat">—</span></div>
