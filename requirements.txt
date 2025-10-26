@@ -1,5 +1,17 @@
+# runtime
 numpy
 pandas
 scipy
+
+# test + dev tools
 pytest
-hashlib  # note: hashlib is stdlib; remove if unnecessary
+pre-commit
+black
+flake8
+mkdocs        # ak chceš generovať docs do /docs
+mypy          # voliteľné, type checking
+python-dotenv # voliteľné, na spravovanie konfigurácie
+
+# Poznámka:
+# - Pri produkčnom nasadení zváž pevné verzie (pinovanie) alebo použitie pyproject.toml.
+# - hashlib a podobné utility sú súčasťou štandardnej knižnice a netreba ich tu uvádzať.
