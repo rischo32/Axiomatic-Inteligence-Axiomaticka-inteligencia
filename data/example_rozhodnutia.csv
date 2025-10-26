@@ -1,0 +1,4 @@
+id,axiom,score,weight,author,date,context
+1,LEX,0.92,0.95,core,2025-10-01,"test decision 1"
+2,WIS,0.76,0.90,user123,2025-10-02,"test decision 2"
+3,REL,0.61,0.85,user456,2025-10-03,"test decision 3"
