@@ -1,0 +1,5 @@
+numpy
+pandas
+scipy
+pytest
+hashlib  # note: hashlib is stdlib; remove if unnecessary
