@@ -1,0 +1,1 @@
+vote_id,date_open,date_close,proposal_title,proposal_type,quorum_required,quorum_obtained,total_for,total_against,total_abstain,final_decision,commit_hash,merkle_root,notes
