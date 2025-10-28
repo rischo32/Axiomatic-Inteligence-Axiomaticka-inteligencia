@@ -177,7 +177,6 @@ voliteľne generovanie Merkle root pre zmeny v data/ (nastaviteľné).
 Testy musia kontrolovať konzistentnosť compute_aav, reprodukovateľnosť Bayes/GD aktualizácií a integritu Merkle funkcionality.
 
 
-
 ---
 
 Anchoring (praktické pravidlá)
@@ -192,9 +191,6 @@ Anchoring (praktické pravidlá)
 
 
 4. Zapíš transakčný hash do audit/log.jsonl.
-
-
-
 
 ---
 
@@ -229,20 +225,12 @@ Implementovať jednoduchý dashboard (statický React/Tailwind) pre vizualizáci
 
 Naplánovať pravidelné audity (30/90/365 dní) s nezávislými Observers.
 
-
-
 ---
 
 Zodpovednosť — jasne
 
-Tento systém navrhuje a uľahčuje rozhodovanie s etickým jadrom. Zodpovednosť za konečné rozhodnutia a ich následky nesie ľudský orgán (CCC, OM, alebo právne zodpovedná osoba). AAV je metrika — nie autorita.
-
-
----
-
-Súbory pripravené pre okamžité vloženie
-
-Skriptové súbory (aav_calc.py, bayes_update.py, gd_update.py, merkle_anchor.py), šablóny docs/governance/*, config/weights.json a data/*.csv sú pripravené — stačí skopírovať do repozitára. Ak chceš, vygenerujem ti ZIP so všetkým hotovým.
-
+Tento systém navrhuje a uľahčuje rozhodovanie s etickým jadrom. 
+Zodpovednosť za konečné rozhodnutia a ich následky nesie ľudský orgán (CCC, OM, alebo právne zodpovedná osoba). 
+AAV je metrika — nie autorita.
 
 ---
