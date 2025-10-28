@@ -1,23 +1,142 @@
 name: CI
-on: [push, pull_request]
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   test:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+
     steps:
-      - uses: actions/checkout@v4
-      - name: Set up Python
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
-      - name: Install deps
+          cache: 'pip'
+
+      - name: Show environment (debug)
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-      - name: Lint
+          echo "Runner: $RUNNER_OS"
+          python -V
+          pwd
+          ls -la
+
+      - name: Create venv & install pip
         run: |
+          python -m venv .venv
+          source .venv/bin/activate
+          python -m pip install --upgrade pip setuptools wheel
+          echo "VENV created and pip upgraded"
+
+      - name: Install dependencies (if requirements.txt exists)
+        run: |
+          source .venv/bin/activate
+          if [ -f "requirements.txt" ]; then
+            echo "Installing from requirements.txt"
+            pip install -r requirements.txt
+          else
+            echo "No requirements.txt found — skipping pip install -r requirements.txt"
+          fi
+          # Try editable install if project has packaging; ignore errors to allow fallback
+          pip install -e . || echo "pip install -e . failed or packaging not present — continuing"
+
+      - name: Show installed packages (debug)
+        run: |
+          source .venv/bin/activate
+          pip list
+
+      - name: Set PYTHONPATH if src/ exists
+        run: |
+          if [ -d "src" ]; then
+            echo "Found src/ — setting PYTHONPATH"
+            echo "PYTHONPATH=$(pwd)/src" >> $GITHUB_ENV
+          else
+            echo "No src/ directory found — not setting PYTHONPATH"
+          fi
+
+      - name: Lint (ruff) — safe mode
+        run: |
+          source .venv/bin/activate
           pip install ruff
-          ruff check src tests
+          ruff --version || true
+
+          LINT_FAILED=0
+
+          if [ -d "src" ]; then
+            echo "Linting src/"
+            ruff check src || LINT_FAILED=1
+          else
+            echo "No src/ directory — skipping src lint"
+          fi
+
+          if [ -d "tests" ]; then
+            echo "Linting tests/"
+            ruff check tests || LINT_FAILED=1
+          else
+            echo "No tests/ directory — skipping tests lint"
+          fi
+
+          # optionally lint repo root (uncomment if desired)
+          # echo "Linting repository root"
+          # ruff check . --extend-exclude .venv || LINT_FAILED=1
+
+          if [ "$LINT_FAILED" -ne 0 ]; then
+            echo "Lint failed. See ruff output above."
+            exit 1
+          else
+            echo "Lint passed (or no lintable paths present)."
+          fi
+
+      - name: Pytest collect-only (show tests)
+        run: |
+          source .venv/bin/activate
+          # Ensure PYTHONPATH available in this session too
+          if [ -d "src" ]; then
+            export PYTHONPATH=$(pwd)/src
+          fi
+          if [ -d "tests" ]; then
+            pytest --maxfail=1 --disable-warnings -q --collect-only
+          else
+            echo "No tests directory found — skipping pytest collect-only"
+          fi
+
       - name: Run tests
         run: |
-          pip install pytest
-          pytest -q
+          source .venv/bin/activate
+          if [ -d "src" ]; then
+            export PYTHONPATH=$(pwd)/src
+          fi
+          if [ -d "tests" ]; then
+            pytest -q -r a --maxfail=1
+          else
+            echo "No tests directory found — nothing to run"
+          fi
+
+      - name: Upload test artifacts (if any)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-logs
+          path: |
+            pytest.log
+            ./*.log
+          # If nothing matches, upload step will be a no-op.
+
+      - name: Post-run debug (list top-level)
+        if: failure()
+        run: |
+          echo "Job failed — listing repository top-level for debugging"
+          ls -la
+          echo "tree L2:"
+          if command -v tree >/dev/null 2>&1; then tree -L 2 || true; else ls -la || true; fi
