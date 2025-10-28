@@ -1,4 +1,4 @@
-# CONTRIBUTING — Axiomatic Intelligence (Hexagramon)
+# CONTRIBUTING — Axiomatic Intelligence
 
 Ďakujeme, že chceš prispieť. Tento dokument popisuje jasné pravidlá, workflow a očakávania pri prispievaní do repozitára. Povedzme veci na rovinu: prispievanie musí byť predvídateľné, zodpovedné a auditovateľné.
 
