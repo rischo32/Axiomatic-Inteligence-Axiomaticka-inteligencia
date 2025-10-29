@@ -1,0 +1,11 @@
+{
+  "license": "AEPL-1.0",
+  "version": "1.0",
+  "doi": "10.5281/zenodo.17479063",
+  "issued": "2025-10-29",
+  "jurisdiction": "Global / SK-EU",
+  "ethical_threshold": 0.6,
+  "hash_algorithm": "SHA256",
+  "sha256": "<sem vlož hash AEPL-1.0.txt>",
+  "author": "Richard Fonfára (Rischo32)"
+}
