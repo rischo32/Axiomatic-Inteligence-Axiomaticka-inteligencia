@@ -1,61 +1,106 @@
-Axiomatickej Inteligencie
+Axiom Engine Public License v1.0 (AEPL-1.0)
+=========================================
 
-(založená na CC BY-SA 4.0 s obmedzeniami core princípov)
+(Axiomatic Ethical Permission License v1.0)
 
-Tento dokument "Axiomatická Inteligencia" (ďalej "Dielo") je uvoľnený pod licenciou 
+Copyright (c) 2025 Richard Fonfára (Rischo32)
+Repozitár: https://github.com/Rischo32
 
-Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0), s 
+Preambula
+--------
+Tento dokument (AEPL-1.0) definuje licenciu pre „Axiomatická Inteligencia / Axiom Engine“ , "AxiomI"
+(ďalej len „Dielo“). Dielo je ontologicko-etický rámec, súbor skriptov, dátových šablón
+a dokumentácie určený pre návrh, hodnotenie a governance AI/AGI systémov. Licencia povoľuje
+používanie, úpravy a šírenie v súlade s etickými princípmi HEXA7 a podmienkami opísanými nižšie.
 
-nasledujúcimi podmienkami:
+1. Udelenie práv
+---------------
+Autor udeľuje každému príjemcovi nevýhradnú, svetovú, bezplatnú licenciu na:
+- kopírovanie Diela,
+- modifikáciu a tvorbu odvodených diel,
+- distribúciu a verejné zdieľanie (komerčne i nekomerčne),
+za predpokladu, že sú dodržané podmienky tejto licencie.
 
-Povolenia: 
+2. Etická súhlasnosť (Ethical Compliance)
+----------------------------------------
+Použitie Diela, alebo jeho modifikácií, je povolené len ak:
+- implementácia a nasadenie sú v súlade so siedmimi princípmi HEXA7:
+  **LEX (Život), WIS (Múdrosť), REL (Vzájomnosť), VER (Pravda), LIB (Sloboda), UNI (Jednota), CRE (Tvorba)**;
+- kompozitné skóre HEXA7 pre dané rozhodnutie/operáciu ≥ **0.6** (60 %);
+- implementácia nevedie k priamej alebo nepriamej deštrukcii života, k porušeniu základných slobôd alebo k zámernému klamstvu/manipulácii.
 
-Zdieľanie: Smiete kopírovať a redistribuovať Dielo v akomkoľvek médiu alebo formáte, 
+3. Atribúcia a NOTICE
+---------------------
+Pri každej distribúcii (zdrojový kód, binárka, dokument, webové zverejnenie) musíte:
+- priložiť tento súbor `LICENSE.md` (AEPL-1.0),
+- pridať `NOTICE.md` s odkazom na pôvodné Dielo a stručným changelogom,
+- zachovať atribúciu: **© 2025 Richard Fonfára (Rischo32)** a link na repo:
+  `https://github.com/Rischo32`.
 
-pre akýkoľvek účel, vrátane komerčného, za predpokladu, že uvediete autora (Richard 
+4. Zdieľanie zmien (Share-Alike)
+-------------------------------
+Všetky modifikácie a odvodené diela, šírené verejne, musia byť uvoľnené pod AEPL-1.0.
+Zmeny musia byť zdokumentované v `CHANGELOG.md` alebo `NOTICE.md`, vrátane informácie,
+či a ako boli použité mechanizmy REP-7 / HIS7 / P-OVR.
 
-Fonfára) a poskytnete odkaz na originál. 
+5. Patentové vyhlásenie
+-----------------------
+Každý kontributor, ktorý prispeje k Dielu, udeľuje príjemcom nevýhradnú, bezplatnú,
+svetovú licenciu na jeho patentové práva nevyhnutné pre používanie jeho príspevkov
+ako súčasti Diela.
 
-Úpravy a adaptácie: Smiete remixovať, transformovať a budovať na Diele, vrátane úprav 
+6. Obmedzenia použitia
+---------------------
+Nie je dovolené používať Dielo (ani jeho odvodeniny) na:
+- účely vojenského útoku, represívnu kontrolu civilného obyvateľstva,
+- masovú manipuláciu, dezinformácie alebo iné činnosti úmyselne poškodzujúce verejné blaho,
+- akékoľvek aktivity, ktoré vedú k systematickému porušovaniu ľudských práv.
 
-váh (w_raw), metrík (M_n), prahových hodnôt (T_n), domén aplikácie (napr. 
+7. Záruky a zodpovednosť
+------------------------
+Dielo je poskytované „AS IS“ (bez záruk). Autor a kontributori v maximálnom rozsahu
+povolenom právom vylučujú akúkoľvek záruku a nezodpovedajú za škody vzniknuté použitím Diela.
+Používateľ zodpovedá za implementáciu, testovanie a lokálnu právnu/etickú súladnosť.
 
-prispôsobenie na iné oblasti), pseudokódov, implementácií alebo rozšírení (vrstvy B-D). 
+8. Spolutvorcovia (Co-Creators)
+-------------------------------
+Každý, kto významne prispeje k Dielu (kód, dokumentácia, implementácia, školenie alebo
+verejná propagácia) a požiada o zápis, môže byť uvedený v `CONTRIBUTORS.md` ako
+**Spolutvorca**. Takýto zápis neznamená prevod autorských práv, len verejné uznanie.
 
-Akékoľvek adaptácie musia byť zdieľané pod rovnakou licenciou (ShareAlike). 
+9. Porušenie licencie
+---------------------
+Porušenie podmienok tejto licencie (napr. zamlčanie atribúcie, obchádzanie HIS7,
+neetiké použitie) vedie k automatickému zániku práv poskytnutých touto licenciou pre porušovateľa.
+Náprava vyžaduje korekciu, verejný audit a schválenie CCC.
 
-Obmedzenia: 
+10. Zmeny licencie
+------------------
+CCC (Core Custodian Council) môže navrhnúť úpravy licencie. Zmeny nadobúdajú účinnosť
+len pre budúce vydania; už vydané verzie zostávajú pod pôvodnou AEPL-1.0.
 
-Core princípy (axiomy 0-7): Nesmiete meniť, nahrádzať alebo odstraňovať core princípy 
+11. Rozhodné právo
+------------------
+V prípade sporu sa odporúča mediácia; ak zlyhá, právne spory sa riešia podľa práva
+Slovenskej republiky (sídlo autora), pokiaľ sa účastníci nedohodnú inak.
 
-(Zámer, Existencia, Múdrosť, Vzájomnosť, Pravda, Sloboda, Jednota, Tvorba), vrátane ich 
+Dátum účinnosti: 29. októbra 2025
 
-KeyStatement, definícií, prečo (empiria + logika), merateľných indikátorov alebo prahov. 
+-----------------------------------------------------
+Contributor License Agreement (CLA) — stručná verzia
+-----------------------------------------------------
 
-Tieto prvky musia zostať nezmenené v každej adaptácii alebo distribúcii. 
+Tento CLA upravuje práva medzi Kontributorom a projektom Axiomatická Inteligencia.
 
-Atribúcia: Musíte uviesť autora, poskytnúť odkaz na licenciu a uviesť, ak boli vykonané 
+Ja, dolupodpísaný(á) Kontributor(ka):
+- potvrdzujem, že som vlastníkom práv k príspevku alebo mám právomoc ho prispieť;
+- udeľujem autorovi a príjemcom príspevku nevýhradnú licenciu na použitie môjho príspevku pod AEPL-1.0;
+- potvrdzujem, že môj príspevok neporušuje práva tretích strán a nie je v rozpore s etickými zásadami AEPL-1.0;
+- súhlasím so zapísaním do `CONTRIBUTORS.md` ak bude môj príspevok akceptovaný.
 
-zmeny (napr. "Upravená verzia: zmenené váhy v HIS-7"). 
+Dátum: __________
+Meno (tlačené): __________
+GitHub profil: https://github.com/__________
+Podpis (elektronický / PR merge): __________
 
-Žiadne dodatočné obmedzenia: Nesmiete pridať právne podmienky, ktoré by bránili 
-
-iným v uplatňovaní práv udelených touto licenciou. 
-
-Porušenie: Ak porušíte dodatkové podmienky (napr. zmeníte core axiomy), licencia sa 
-
-automaticky mení na štandardnú CC BY-SA 4.0 bez týchto obmedzení, ale autor si 
-
-vyhradzuje právo na právne kroky za porušenie integrity Diela. 
-
-Ďalšie podmienky z CC BY-SA 4.0: 
-
-Dielo sa poskytuje "také, aké je", bez záruk. 
-
-Plný text štandardnej CC BY-SA 4.0: https://creativecommons.org/licenses/by-
-
-sa/4.0/legalcode. 
-
-Autor: Richard Fonfára , za asociácie ChatGPT,Copilot,DeepSeek,Grok 
-
-Dátum platnosti: Od 21. októbra 2025
+Poznámka: pre automatizáciu CLA sa odporúča GitHub Action, ktorá overí `cla-signed` label pred merge.
