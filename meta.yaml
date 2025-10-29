@@ -1,0 +1,14 @@
+license:
+  name: AEPL-1.0 
+[Axiom Engine Public License 
+(Axiomatic Ethical Permission License v1.0)"]
+ creators:
+  - name: "Richard Fonfára"
+    affiliation: "Independent / Rischo32"
+ identifier: aepl-1.0
+  version: 1.0
+  doi: "10.5281/zenodo.17479063"
+  sha256: "a6bc1a6a2742e8cf17ee0bfd5aad2bd9f85b85b7d00034272643a5924183416f"
+  issued: 2025-10-29
+  jurisdiction: Global / SK-EU
+  ethical_threshold: 0.6
