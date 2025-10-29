@@ -10,10 +10,8 @@
 > — Richard Fonfára, 2025
 
 ## O projekte
-Axiomatická Inteligencia (Axiom Engine) je ontologicko-etický rámec a praktická sada nástrojov určených
-pre návrh, meranie, audit a governance rozhodnutí AI/AGI systémov. Cieľom je vytvoriť auditovateľný,
-etický, adaptívny systém rozhodovania postavený na **HEXA7** (7 princípoch): LEX, WIS, REL, VER, LIB, UNI, CRE.  
-Repo obsahuje dokumentáciu, scritpy na výpočty, dátové šablóny a workflowy pre REP-7 / HIS-7 a Merkle anchoring. 1
+Axiomatická Inteligencia (Axiom Engine) je ontologicko-etický rámec a praktická sada nástrojov určených pre návrh, meranie, audit a governance rozhodnutí AI/AGI systémov.
+ Cieľom je vytvoriť auditovateľný,etický, adaptívny systém rozhodovania postavený na **HEXA7** (7 princípoch): LEX, WIS, REL, VER, LIB, UNI,CRE. Repo obsahuje dokumentáciu, scritpy na výpočty, dátové šablóny a workflowy pre REP-7 / HIS-7 a Merkle anchoring.
 
 ## Kľúčové komponenty
 - `scripts/aav_calc.py` — výpočty AAV (Agregované Axiomatické Váhy).  
@@ -28,4 +26,6 @@ Repo obsahuje dokumentáciu, scritpy na výpočty, dátové šablóny a workflow
 ```bash
 git clone git@github.com:Rischo32/Axiomatic-Inteligence-Axiomaticka-inteligencia.git
 cd Axiomatic-Inteligence-Axiomaticka-inteligencia
+
+# Copyright (c) 2025 Richard Fonfára (Rischo32). License: AEPL-1.0 (doi:10.5281/zenodo.17479063)
 
