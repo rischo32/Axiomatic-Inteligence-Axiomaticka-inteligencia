@@ -1,0 +1,13 @@
+{
+  "metadata": {
+    "title": "AEPL-1.0 — Axiom Engine Public License (Axiomatic Ethical Permission License v1.0)",
+    "upload_type": "publication",
+    "description": "Custom ethical license for the Axiomatic Intelligence framework. Includes machine-readable license.json and metadata for DOI registration.",
+    "creators": [
+      {"name": "Richard Fonfára", "affiliation": "Rischo32"}
+    ],
+    "publication_date": "2025-10-29",
+    "keywords": ["AEPL","Axiom Engine","ethical license","AI ethics","HEXA7"],
+    "license": "AEPL-1.0"
+  }
+}
