@@ -26,3 +26,5 @@ Repo obsahuje dokumentáciu, scritpy na výpočty, dátové šablóny a workflow
 ```bash
 git clone git@github.com:Rischo32/Axiomatic-Inteligence-Axiomaticka-inteligencia.git
 cd Axiomatic-Inteligence-Axiomaticka-inteligencia
+
+📜 License: [AEPL-1.0](https://doi.org/10.5281/zenodo.17479063)
