@@ -1,9 +1,16 @@
 {
-  "license": "AEPL-1.0",
-  "version": "1.0"
+  "license_name": "Axiom Engine Public License v1.0",
+  "short_name": "AEPL-1.0",
   "spdx_id": "LicenseRef-AEPL-1.0",
-  "doi": "10.5281/zenodo.17479063",
+  "author": "Richard Fonfára (Rischo32)",
+  "year": 2025,
+  "repository": "https://github.com/Rischo32",
+  "license_text_file": "AEPL-1.0.txt",
   "sha256": "a6bc1a6a2742e8cf17ee0bfd5aad2bd9f85b85b7d00034272643a5924183416f",
-  "issued": "2025-10-29",
-  "author": "Richard Fonfára (Rischo32)"
+  "doi": "10.5281/zenodo.17479063",
+  "package_sha256_zip": "9f4d197411ed940e8ea225ad21625616ac265ce585b4747c497019e35febdcbc",
+  "compatible_with": ["CC-BY-SA-4.0"],
+  "jurisdiction": "SK/International",
+  "ethical_threshold": 0.6,
+  "issued": "2025-10-29"
 }
