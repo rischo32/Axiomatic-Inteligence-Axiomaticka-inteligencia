@@ -1,0 +1,20 @@
+SPDXVersion: SPDX-2.2
+DataLicense: CC0-1.0
+SPDXID: SPDXRef-DOCUMENT
+DocumentName: AEPL-1.0 License Document
+Creator: Organization: Rischo32
+Created: 2025-10-29T00:00:00Z
+
+PackageName: Axiomatic-Inteligence-Axiomaticka-inteligencia
+SPDXID: SPDXRef-Package
+PackageLicenseConcluded: NOASSERTION
+PackageCopyrightText: (c) 2025 Richard Fonfára (Rischo32)
+
+Relationship: SPDXRef-DOCUMENT describes SPDXRef-Package
+
+LicenseInfoFromFiles: LicenseRef-AEPL-1.0
+
+# LicenseRef definition (reference to local license text)
+LicenseID: LicenseRef-AEPL-1.0
+ExtractedText: <see LICENSE file in repository root - AEPL-1.0>
+LicenseName: Axiom Engine Public License v1.0
