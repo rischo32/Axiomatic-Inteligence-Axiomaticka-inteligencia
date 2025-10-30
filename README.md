@@ -1,7 +1,7 @@
 # Axiomatická Inteligencia — Axiom Engine (v4.0)
 
 **Autor:** Richard Fonfára (Rischo32)  
-**DOI licencia:** [AEPL-1.0 — 10.5281/zenodo.17479063](https://doi.org/10.5281/zenodo.17479063)  
+**DOI licencia:** [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17479064.svg)](https://doi.org/10.5281/zenodo.17479064)
 **SHA256 (AEPL-1.0.txt):** `a6bc1a6a2742e8cf17ee0bfd5aad2bd9f85b85b7d00034272643a5924183416f`  
 **Posledná aktualizácia:** 2025-10-29
 
