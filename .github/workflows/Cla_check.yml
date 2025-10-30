@@ -1,0 +1,26 @@
+name: Require CLA label on Pull Requests
+
+on:
+  pull_request:
+    types: [opened, reopened, labeled, synchronize]
+
+jobs:
+  check-cla:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check CLA label
+        uses: actions/github-script@v6
+        with:
+          github-token: '{{ secrets.GITHUB_TOKEN }}'
+          script: |
+            const pr = context.payload.pull_request;
+            if (!pr) {
+              core.setFailed("No pull request context");
+            } else {
+              const labels = pr.labels.map(l => l.name);
+              if (!labels.includes("cla-signed")) {
+                core.setFailed("Pull request missing label 'cla-signed'. Please sign the CLA and add the label.");
+              } else {
+                core.info("CLA label present.");
+              }
+            }
