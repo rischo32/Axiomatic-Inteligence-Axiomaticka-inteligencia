@@ -1,0 +1,35 @@
+name: Verify AEPL-1.0 SHA on release and push
+
+on:
+  release:
+    types: [published]
+  push:
+    branches: [ main ]
+
+jobs:
+  verify-sha:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compute SHA256 of AEPL-1.0.txt
+        run: |
+          if [ ! -f "AEPL-1.0.txt" ]; then
+            echo "ERROR: AEPL-1.0.txt not found"
+            exit 1
+          fi
+          sha256sum AEPL-1.0.txt | awk '{print $1}' > computed_sha.txt
+          echo "Computed SHA: $(cat computed_sha.txt)"
+      - name: Read expected SHA from license.json
+        run: |
+          if [ ! -f "license.json" ]; then
+            echo "ERROR: license.json not found"
+            exit 1
+          fi
+          expected=$(jq -r '.sha256' license.json)
+          computed=$(cat computed_sha.txt)
+          echo "Expected SHA: $expected"
+          if [ "$expected" != "$computed" ]; then
+            echo "SHA mismatch: expected $expected but got $computed"
+            exit 1
+          fi
+          echo "SHA matches. Verification passed."
