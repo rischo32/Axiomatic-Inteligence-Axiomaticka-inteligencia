@@ -1,11 +1,8 @@
 {
   "license": "AEPL-1.0",
-  "version": "1.0",
+  "spdx_id": "LicenseRef-AEPL-1.0",
   "doi": "10.5281/zenodo.17479063",
+  "sha256": "a6bc1a6a2742e8cf17ee0bfd5aad2bd9f85b85b7d00034272643a5924183416f",
   "issued": "2025-10-29",
-  "jurisdiction": "Global / SK-EU",
-  "ethical_threshold": 0.6,
-  "hash_algorithm": "SHA256",
-  "sha256": "9f4d197411ed940e8ea225ad21625616ac265ce585b4747c497019e35febdcbc",
   "author": "Richard Fonfára (Rischo32)"
 }
