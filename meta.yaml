@@ -1,13 +1,20 @@
-license:
-  name: AEPL-1.0 
-Axiom Engine Public License (Axiomatic Ethical Permission License v1.0)"
- creators:
+title: "AEPL-1.0 — Axiom Engine Public License (Axiomatic Ethical Permission License v1.0)"
+creators:
   - name: "Richard Fonfára"
     affiliation: "Independent / Rischo32"
- identifier: aepl-1.0
-  version: 1.0
-  doi: "10.5281/zenodo.17479063"
-  sha256: "a6bc1a6a2742e8cf17ee0bfd5aad2bd9f85b85b7d00034272643a5924183416f"
-  issued: 2025-10-29
-  jurisdiction: Global / SK-EU
-  ethical_threshold: 0.6
+publication_date: "2025-10-29"
+doi: "10.5281/zenodo.17479063"
+description: "Custom ethical license for the Axiomatic Intelligence framework. Includes machine-readable license.json and metadata for DOI registration."
+keywords:
+  - AEPL
+  - Axiom Engine
+  - ethical license
+  - AI ethics
+  - HEXA7
+version: "1.0"
+sha256: "a6bc1a6a2742e8cf17ee0bfd5aad2bd9f85b85b7d00034272643a5924183416f"
+package_sha256_zip: "9f4d197411ed940e8ea225ad21625616ac265ce585b4747c497019e35febdcbc"
+license: "AEPL-1.0"
+compatible_with:
+  - "CC-BY-SA-4.0"
+jurisdiction: "Global / SK-EU"
