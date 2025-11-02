@@ -1,19 +1,18 @@
-# Axiomatická Inteligencia — Axiom Engine (v4.0)
+# Axiomatic Intelligence — Axiom Engine (Supplementary Files)
 
-**Autor:** Richard Fonfára (Rischo32)  
-**DOI licencia:** [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17479064.svg)](https://doi.org/10.5281/zenodo.17479064)
-**SHA256 (AEPL-1.0.txt):** `a6bc1a6a2742e8cf17ee0bfd5aad2bd9f85b85b7d00034272643a5924183416f`  
-**Posledná aktualizácia:** 2025-10-29
+Tento repozitár obsahuje podporne súbory pre článok a technický dodatok k Axiomatickej inteligencii (v4.0).
+Obsahuje príklady skriptov, markdown manuály, licenciu AEPL-1.0 a jednoduché nástroje pre anchoring a validáciu.
 
-> „Pravá múdrosť začína, keď pochopíme, že vlastne nevieme nič...“ — Richard Fonfára, 2025
+Súbory:
+- `manual_article.md` — Hlavný článok / manuál (upravený, publikovateľný).
+- `manual_addendum.md` — Technický dodatok: AI-assisted scoring & Execution Guard.
+- `ai_pipeline.py` — Pipeline pre AI scoring (featurize, embed, scorer, calibrator, logging).
+- `compute_aav.py` — Výpočet AAV (Aggregated Axiom Value).
+- `train_calibration.py` — Tréning kalibrátora (isotonic / platt).
+- `execution_guard.py` — Execution Guard stub (validátory a blokovanie exekúcie).
+- `anchor.py` — Jednoduchý Merkle root helper.
+- `AEPL-1.0.md` — Licencia AEPL-1.0 (Axiomatic Ethical Public License).
+- `requirements.txt` — Základné Python závislosti.
+- `.gitignore` — odporúčané ignorovanie lokálnych súborov.
 
-## O projekte
-Axiomatická Inteligencia (Axiom Engine) je ontologicko-etický rámec a sada nástrojov
-pre návrh, meranie, audit a governance rozhodnutí AI/AGI systémov. Jadro tvoria
-princípy HEXA7: LEX, WIS, REL, VER, LIB, UNI, CRE.
-
-## Licencia
-Tento projekt (kód, dokumentácia a metadáta) je chránený **AEPL-1.0** (Axiom Engine Public License v1.0).
-Plné znenie licencie: `/LICENSE` a canonical copy `/AEPL-1.0.txt`.
-Strojovo čitateľné metadáta: `/license.json` a `/meta.yaml`.
-DOI: `10.5281/zenodo.17479063`.
+Poznámka: súbory sú pripravené ako štartovací bod. Pred produkčným nasadením vykonaj code review, security audit a naplno otestuj v shadow-mode.
