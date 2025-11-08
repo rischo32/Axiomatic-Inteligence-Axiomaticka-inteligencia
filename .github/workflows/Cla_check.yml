@@ -11,7 +11,8 @@ jobs:
       - name: Check CLA label
         uses: actions/github-script@v6
         with:
-          github-token: '{{ secrets.GITHUB_TOKEN }}'
+          cla-signed: cla-signed
+github-token: '{{ secrets.GITHUB_TOKEN }}'
           script: |
             const pr = context.payload.pull_request;
             if (!pr) {
