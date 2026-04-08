@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/1083318220.svg)](https://doi.org/10.5281/zenodo.17482982)
+
 # Axiomatic Intelligence — Axiom Engine (Supplementary Files)
 
 Tento repozitár obsahuje podporne súbory pre článok a technický dodatok k Axiomatickej inteligencii (v4.0).
