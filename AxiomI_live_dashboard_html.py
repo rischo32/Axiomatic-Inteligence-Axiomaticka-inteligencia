@@ -1,3 +1,4 @@
+"""
 <!doctype html>
 <html lang="sk">
 <head>
@@ -487,3 +488,5 @@ if(!rawRows.length){
 </script>
 </body>
 </html>
+
+"""
