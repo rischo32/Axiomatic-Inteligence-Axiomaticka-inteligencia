@@ -1,4 +1,7 @@
-# Axiomatic Intelligence — Axiom Engine (Supplementary Files)
+# Axiomatic Intelligence 
+
+https://doi.org/10.5281/zenodo.17482983
+https://doi.org/10.5281/zenodo.17608724
 
 Tento repozitár obsahuje podporne súbory pre článok a technický dodatok k Axiomatickej inteligencii (v4.0).
 Obsahuje príklady skriptov, markdown manuály, licenciu AEPL-1.0 a jednoduché nástroje pre anchoring a validáciu.
