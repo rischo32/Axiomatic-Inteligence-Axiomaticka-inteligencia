@@ -1,0 +1,111 @@
+AEPL 1.1 — Axiomatic Engine Public License (v1.1) — EU-AI Act Compatibility Draft
+
+Copyright (c) 2025 Richard Fonfára & AxiomI Community
+
+Preambula
+
+
+AEPL 1.1 je licencia vytvorená pre publikovanie Manifestu a súvisiacich artefaktov Axiomatickej Inteligencie („Dielo“). Táto verzia kladie dôraz na zachovanie immutable core ôsmich axiómov a na povinnosti, ktoré môžu vyplývať z právnych predpisov EÚ, najmä z Regulation (EU) 2024/1689 (Artificial Intelligence Act).
+
+Jej účelom je umožniť rozvoj umelej inteligencie v súlade s axiomatickými princípmi života a etickej rovnováhy.
+ 
+Táto licencia nezbavuje držiteľa dielu povinnosti dodržiavať platné právo; ak sa Dielo použije v kontexte, pre ktorý AI Act ukladá povinnosti (napr. high-risk AI), licencovaný používateľ je povinný tieto povinnosti plniť.
+
+1. Definície
+
+„Dielo“ = manifest, zdrojové kódy, modely, dokumentácia, metaúdaje, konfiguračné súbory, a iné súbory priložené k vydaniu.
+
+„Core axiómy“ = 8 axiómov definovaných v manifeste (INT, LEX, WIS, REL, VER, LIB, UNI, CRE).
+
+Porušenie ktoréhokoľvek z týchto axiomov ruší etickú platnosť licencie a zároveň vedie k moratóriu na použitie diela, a ďalšie trestné kroky pre Európsky súdny dvor.
+
+„Core metadata“ = nezmeniteľné položky súvisiace s core axiómami (text axiómov, base_weight_w0, min_threshold_Tn, hash, signature).
+
+„Runtime activations“ = I_i(t), aktivačné skóre; Nie sú to core metadata.
+
+„Provider / Deployér / Používateľ“ = osoba alebo subjekt, ktorý Dielo poskytuje, upravuje alebo nasadzuje.
+
+
+2. Povolenia
+
+Licencovaný používateľ môže: používať, kopírovať, upravovať, distribuovať a vytvárať odvodené diela, vrátane komerčného využitia, pokým sú splnené podmienky článku 3 až 6 a sú dodržané právne povinnosti aplikovateľné v jurisdikcii nasadenia (napr. EU AI Act).
+
+3. Immutable core — nezmeniteľnosť
+
+Text core axiómov a ich min_threshold hodnoty sú immutable: každý súbor, publikácia alebo strojovo čitateľná reprezentácia, ktorá obsahuje core metadata, musí zachovať pôvodné znenie týchto metadát, vrátane originálnych hashov a podpisov, alebo jasne uviesť, že ide o derivát/variant (ktorý nemôže tvrdiť, že mení originálne immutable core).
+
+Žiadna technická manipulácia ani automatizovaný proces nesmie zmeniť core metadata v append-only ledger bez audítovanej a verejnej revízie jadra (nový release s CoreCustodian podpisom). Porušenie tohto ustanovenia je považované za hrubé porušenie licencie a môže viesť k revokácii práv poskytnutých touto licenciou.
+
+
+4. Súlad s právom a povinnosti podľa AI Act (povinné pre implementácie v EÚ alebo pre ktorékoľvek použitie spadajúce pod AI Act)
+
+Ak sa Dielo používa v rámci aplikácie, ktorá podlieha povinnostiam podľa EU AI Act (napr. ako high-risk AI systém, alebo ak generuje syntetický obsah podliehajúci povinnostiam transparentnosti), licencovaný používateľ sa zaväzuje:
+
+a) zabezpečiť technickú dokumentáciu a plán riadenia rizík (technical documentation, risk management plan) v súlade s článkami o konformite a technickej dokumentácii v AI Act; 
+
+b) zaviesť a udržiavať post-market monitoring systém, ak to AI Act vyžaduje, a viesť záznamy o prevádzke systému; 
+
+c) poskytnúť mechanizmy human oversight primerané riziku a kontextu použitia (možnosť monitorovať, interpretovať a override systém); 
+
+d) plniť transparentnostné povinnosti (označovanie syntetického obsahu, informovanie používateľov o interakcii s AI, ak to AI Act vyžaduje); 
+
+e) uchovávať a poskytovať záznamy/logy pri high-risk nasadení tak, ako to vyžaduje právo (licencia odporúča retention politiky a integrity auditu). 
+
+5. Adaptívne učenie, LCST a Synthetic Data (špecifické požiadavky)
+
+Automatické učenie (napr. LCST) a synaptické aktualizácie NESMÚ byť nasadené do produkcie bez preukázanej konformity a bez postupov: sandbox → dual human review (min. 2 nezávislých recenzentov) → canary-rolling (β ≤ 0.12 pri prvom nasadení) → TruthGate sign-off.
+
+Synthetic data: povolené len po sandbox testoch, dual human review a TruthGate sign-off; provenance metadata sú povinné.
+
+Implementácie musia zabezpečiť auditovateľné logovanie všetkých adaptívnych krokov a Δa_ij úprav (CNE), aby mohla byť preukázaná ich bezpečnosť a súlad s AI Act.
+
+Risk AI systém v EÚ, musíte s distribúciou sprevádzať vyhlásenie o konformite alebo iný doklad o tom, že aplikácia spĺňa požiadavky AI Act (alebo je v procese konformity). To zahŕňa aj technickú dokumentáciu a post-market monitoring plan. 
+
+
+7. Attribution & označenie
+
+Pri každom verejnom použití, modifikácii alebo distribúcii musí byť uvedená atribúcia:
+
+“Axiomatic's Intelligence — Manifest v8.0.0; Copyright (c) 2025 Richard Fonfára & AxiomI Community; Licensed under AEPL 1.1”.
+
+Ak dielo publikujete na Zenodo alebo inej repozitárnej platforme, priložte túto licenciu a manifest.
+
+
+8. Zodpovednosť & obmedzenia
+
+Dielo je poskytované „AS IS“. Autor a správcovia nenesú zodpovednosť za škody vyplývajúce z jeho použitia; povinnosť zabezpečiť právnu a regulačnú súladnosť je na držiteľovi/prevádzkovateľovi.
+
+Používateľ preberá etickú a právnu zodpovednosť za svoje rozhodnutia.
+
+Ak dôjde k závažnému porušeniu bezpečnostných pravidiel definovaných v článkoch 3–6 (napr. úmyselné obchádzanie immutable core, zanedbanie požiadaviek AI Act pri high-risk nasadení), autor si vyhradzuje právo odobrať (revoke) licenciu vo vzťahu k konkrétnemu páchateľovi po auditnom procese.
+
+ a 
+
+Použitie tohto diela v nasledujúcich oblastiach je výslovne zakázané:
+Vývoj zbraní, represívnych systémov, dezinformácií, propagandy, manipulatívnych modelov, alebo podobné projekty, ktoré porušujú LEX (život) alebo LIB (slobodu), alebo či už ktorúkoľvek ďalšiu axiómu z Hard-Gate (HEXA7), ktoré sú v akomkoľvek rozpore z "Jadrom" systému... Systém je živototvorný...
+
+
+
+
+9. Revokácia & vymáhanie
+
+Revokácia práv na základe tejto licencie je možná iba po audite a manuálnej verifikácii porušenia bezpečnostných pravidiel; revokácia sa vykoná transparentne a s publikovaním dôvodov (audit report).
+
+
+10. Misc
+
+Táto licencia sa nepovažuje za právne poradenstvo. Odporúča sa konzultácia s právnikom pred komerčným nasadením, najmä ak sa Dielo používa v EÚ alebo v aplikáciách spadajúcich pod AI Act.
+
+Táto licencia je verziovaná; následné verzie môžu upravovať text (bez retroaktívneho účinku na predošlé vydania).
+
+Dodatočné ustanovenia (AEPL-1.1 Extension to CERN-OHL-S v2)
+
+AEPL-1.1 je koncepčne kompatibilná s CERN Open Hardware License – Strongly Reciprocal v2, rozšírená o etický a ontologický rámec.
+
+Všetky deriváty a Použitie musia byť:
+
+otvorené, transparentné a replikovateľné,
+Z princípmi života a dôstojnosti v súlade s vedomím,
+priebežne auditované cez systém HEXA7/REP-7.
+
+---

@@ -1,14 +1,12 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
+message: "If you use this software/manifest, please cite as below."
+title: "Axiomatic's Intelligence 8x8: Manifest v8.0.0"
+version: "v8.0.0"
+doi: "TO_BE_FILLED_BY_USER"
 authors:
-- family-names: "YOUR_NAME_HERE"
-  given-names: "YOUR_NAME_HERE"
-  orcid: "https://orcid.org/0000-0000-0000-0000"
-- family-names: "Lisa"
-  given-names: "Mona"
-  orcid: "https://orcid.org/0000-0000-0000-0000"
-title: "Axiomatic-Inteligence-Axiomaticka-inteligencia"
-version: 1.0.0
-doi: 10.5281/zenodo.1234
-date-released: 2026-05-16
-url: "https://github.com/rischo32/Axiomatic-Inteligence-Axiomaticka-inteligencia"
+  - family-names: "Fonfára"
+    given-names: "Richard"
+    orcid: "TO_BE_FILLED_OPTIONAL"
+date-released: "2025-11-14"
+license: "AEPL-1.1"
+url: "http://axiomi.blogspot.com"

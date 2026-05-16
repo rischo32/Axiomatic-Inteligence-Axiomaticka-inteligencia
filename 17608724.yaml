@@ -1,0 +1,56 @@
+abstract: "<p><strong><span dir=\"auto\"><span dir=\"auto\">Inteligencia Axiomatic\
+  \ v8.0.0</span></span></strong></p>\n<p>&nbsp;</p>\n<p><span dir=\"auto\"><span\
+  \ dir=\"auto\">Axiomatic's Intelligence (v8.0.0) je ontologicko-etick&yacute; r&aacute;mec\
+  \ pre bezpe\u010Dn&eacute; syst&eacute;my umelej inteligencie, zalo\u017Een&yacute;\
+  \ na nemennom s&uacute;bore 8 z&aacute;kladn&yacute;ch axi&oacute;mov (INT, LEX,\
+  \ WIS, REL, VER, LIB, UNI, CRE).</span></span></p>\n<p><span dir=\"auto\"><span\
+  \ dir=\"auto\">Jadro je kryptograficky chr&aacute;nen&eacute; a reprezentovan&eacute;\
+  \ ako 8-uzlov&aacute; axiomov&aacute; sie\u0165 (8&times;8), doplnen&aacute; o normy\
+  \ bezpe\u010Dnostn&eacute;ho riadenia, drift-detekcie, auditov, simul&aacute;ci&iacute;\
+  \ a form&aacute;lnej verifik&aacute;cie.</span></span></p>\n<p><span dir=\"auto\"\
+  ><span dir=\"auto\">T&aacute;to verzia je prv&aacute; verzia plne zos&uacute;laden&aacute;\
+  \ s E&Uacute; AI Act, vr&aacute;tane po\u017Eiadaviek na:</span></span></p>\n<p>&nbsp;</p>\n\
+  <p><span dir=\"auto\"><span dir=\"auto\">transparentnos\u0165,</span></span></p>\n\
+  <p><span dir=\"auto\"><span dir=\"auto\">riadenie riz&iacute;k,</span></span></p>\n\
+  <p><span dir=\"auto\"><span dir=\"auto\">logovanie a auditovate\u013Enos\u0165,</span></span></p>\n\
+  <p><span dir=\"auto\"><span dir=\"auto\">\u013Eudsk&yacute; doh\u013Ead (HITL/HOTL),</span></span></p>\n\
+  <p><span dir=\"auto\"><span dir=\"auto\">bezpe\u010Dn&uacute; pr&aacute;cu so syntetick&yacute;mi\
+  \ d&aacute;tami,</span></span></p>\n<p><span dir=\"auto\"><span dir=\"auto\">odolnos\u0165\
+  \ vo\u010Di zmen&aacute;m jadra (nezmenite\u013En&eacute; axi&oacute;my).</span></span></p>\n\
+  <p>&nbsp;</p>\n<p><span dir=\"auto\"><span dir=\"auto\">Bal&iacute;k obsahuje:</span></span></p>\n\
+  <p><span dir=\"auto\"><span dir=\"auto\">Inteligencia Manifest Axiomatic v8.0.0,</span></span></p>\n\
+  <p><span dir=\"auto\"><span dir=\"auto\">Licencia AEPL-EU 1.1 (EU AI Act&ndash;aligned)</span></span></p>\n\
+  <p>&nbsp;</p>\n<p><span dir=\"auto\"><span dir=\"auto\">Syst&eacute;m je ur\u010D\
+  en&yacute; pre v&yacute;skumn&iacute;kov AI bezpe\u010Dnosti, etick&yacute;ch architektov,\
+  \ tvorcov vysokorizikov&yacute;ch aplik&aacute;ci&iacute; AI a pre projekty, ktor&eacute;\
+  \ s&uacute; potrebn&eacute; pre nemenn&eacute; jadro rozhodovania s aud&iacute;torskou\
+  \ nadstavbou.</span></span></p>"
+authors:
+- family-names: "Fonf\xE1ra"
+  given-names: Richard
+  orcid: 0009-0008-5980-8940
+cff-version: 1.2.0
+date-released: '2025-11-14'
+doi: 10.5281/zenodo.17608724
+identifiers:
+- type: doi
+  value: 10.5281/zenodo.17608724
+- type: url
+  value: https://vectaetos.eu/
+- type: swh
+  value: swh:1:dir:2f532d33cf71fd66c4674d1c26dfbc424755731e;origin=https://doi.org/10.5281/zenodo.17605439;visit=swh:1:snp:218a71ae8a305cd11f7c1d5edd6fc8ad9393d575;anchor=swh:1:rel:8d2bb90d0a9538a0ba17a94f0c06b14c129782ea;path=/
+keywords:
+- Ai
+- euroscivoc:559
+- Governance
+- Observer
+- Axiomatic's Intelligence
+- "E\xFA AI act"
+license:
+- cc-by-4.0
+- cern-ohl-s-2.0
+license-url: https://doi.org/10.5281/zenodo.17605440
+message: If you use this software, please cite it using the metadata from this file.
+title: "AEPL-1.1 \u2014 Axiomatic Ethical Permission License"
+type: software
+version: '1.1'
