@@ -20,7 +20,7 @@ import argparse
 import json
 import os
 from hashlib import sha256
-from datetime import datetime
+from datetime import datetime, timezone
 import csv
 import sys
 
@@ -171,9 +171,11 @@ def merkle_root_from_csv_rows(path, row_to_string=None, max_rows=None):
 # -------------------------
 
 def append_audit_log(logpath, actor, action, payload, commit_hash=None, merkle_leaf=None):
-    os.makedirs(os.path.dirname(logpath), exist_ok=True)
+    log_dir = os.path.dirname(logpath)
+    if log_dir:
+        os.makedirs(log_dir, exist_ok=True)
     entry = {
-        "timestamp": datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
+        "timestamp": datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
         "actor": actor,
         "action": action,
         "payload_hash": sha256_hex(json.dumps(payload, sort_keys=True)),
@@ -299,12 +301,15 @@ def build_parser():
     sp.add_argument("--success", type=int, required=True)
     sp.add_argument("--trials", type=int, required=True)
     sp.add_argument("--output", required=False, help="uložiť výsledok JSON")
-    def _parse_priors(ns):
-        if ns.prior:
-            ns.prior_a, ns.prior_b = ns.prior
-        elif ns.prior_a is None or ns.prior_b is None:
-            ns.prior_a, ns.prior_b = 1.0, 1.0
-    sp.set_defaults(func=lambda args: (setattr(args, 'prior_a', (args.prior[0] if args.prior else args.prior_a)), setattr(args, 'prior_b', (args.prior[1] if args.prior else args.prior_b)), cmd_bayes_update(args)))
+    def _run_bayes_update(args):
+        if args.prior:
+            args.prior_a, args.prior_b = args.prior
+        elif args.prior_a is None and args.prior_b is None:
+            args.prior_a, args.prior_b = 1.0, 1.0
+        elif args.prior_a is None or args.prior_b is None:
+            raise ValueError("Specify both --prior-a and --prior-b, or neither.")
+        cmd_bayes_update(args)
+    sp.set_defaults(func=_run_bayes_update)
 
     sp = sub.add_parser("gd-update", help="Gradient descent update pre vektory váh.")
     sp.add_argument("--weights", required=True, help="JSON array váh (napr. '[1.0,0.95]')")
